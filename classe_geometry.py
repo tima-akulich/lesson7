@@ -62,7 +62,7 @@ print('Triangleside')
 a = int(input("Enter side_a triangle: "))
 d=int(input("Enter side_d triangle: "))
 c = int(input("Enter side_c triangle:"))
-p= a+d+c
+p= (a+d+c)/2
 obj4 = Triangleside(a,d,c,p)
 print("Area of triangle:", round(obj4.area(), 2))
 
