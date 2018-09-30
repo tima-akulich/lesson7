@@ -9,6 +9,7 @@ parser.add_argument('--path', required=True, type=str)
 parser.add_argument('--width', required=True, type=int)
 parser.add_argument('--height', required=True, type=int)
 image_thumb = parser.parse_args()
+
 os.chdir(image_thumb.path)
 
 for i in glob.glob("*.jpg"):
