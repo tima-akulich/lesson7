@@ -6,14 +6,12 @@ xmlFile = 'datos.xml'
 csvdatos = csv.reader(open(csvFile))
 xmldatos = open(xmlFile, 'w')
 xmldatos.write('<?xml version="1.0"?>' + "\n")
-# there must be only one top-level tag
 xmldatos.write('<csv_datos>' + "\n")
 
 rowNum = 0
 for row in csvdatos:
     if rowNum == 0:
         tags = row
-        # replace spaces w/ underscores in tag names
         for i in range(len(tags)):
             tags[i] = tags[i].replace(' ', '_')
     else:
