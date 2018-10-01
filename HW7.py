@@ -3,6 +3,7 @@ import argparse
 from PIL import Image
 import glob
 import os
+import math
 
 
 parser = argparse.ArgumentParser()
@@ -32,5 +33,24 @@ for infile in glob.glob(result.path + "/ *.jpg"):
     image.save(file + ".thumbnail", "JPEG")
 
 # Task 3
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return math.pi * self.radius ** 2
 
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    def area(self):
+        return self.width * self.height
 
+class Triangle:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+    def area(self):
+        p = (self.a + self.b + self.c) / 2
+        return sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
